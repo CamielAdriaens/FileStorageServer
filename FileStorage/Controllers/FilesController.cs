@@ -18,6 +18,8 @@ namespace FileStorage.Controllers
         {
             _mongoDbContext = mongoDbContext;
         }
+
+        // Get all files
         [HttpGet()]
         public async Task<IActionResult> GetFiles()
         {
@@ -37,6 +39,8 @@ namespace FileStorage.Controllers
 
             return Ok(fileInfos);
         }
+
+        // Upload a file
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFile([FromForm] IFormFile file)
         {
@@ -49,6 +53,7 @@ namespace FileStorage.Controllers
             return Ok(new { FileId = fileId.ToString() });
         }
 
+        // Download a file
         [HttpGet("download/{id}")]
         public async Task<IActionResult> DownloadFile(string id)
         {
@@ -63,6 +68,7 @@ namespace FileStorage.Controllers
             return File(fileStream, "application/octet-stream", $"{id}.file");
         }
 
+        // Delete a file
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteFile(string id)
         {

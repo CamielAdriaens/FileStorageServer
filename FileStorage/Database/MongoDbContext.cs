@@ -3,6 +3,9 @@ using MongoDB.Driver.GridFS;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
+using System.IO;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace FileStorage.Database
 {
@@ -22,15 +25,16 @@ namespace FileStorage.Database
             _database = client.GetDatabase(settings.Value.DatabaseName);
             _gridFsBucket = new GridFSBucket(_database);
         }
-        public IMongoDatabase Database => _database;
 
-        public IGridFSBucket GridFsBucket => _gridFsBucket;
+        // Fetch all files
         public async Task<List<GridFSFileInfo>> GetFilesAsync()
         {
             var filter = Builders<GridFSFileInfo>.Filter.Empty;  // No filter for all files
             using var cursor = await _gridFsBucket.FindAsync(filter);
             return await cursor.ToListAsync();
         }
+
+        // Upload a file
         public async Task<ObjectId> UploadFileAsync(Stream sourceStream, string fileName)
         {
             if (string.IsNullOrEmpty(fileName))
@@ -42,6 +46,7 @@ namespace FileStorage.Database
             return fileId;
         }
 
+        // Download a file
         public async Task<Stream> DownloadFileAsync(ObjectId fileId)
         {
             var destinationStream = new MemoryStream();
@@ -50,6 +55,7 @@ namespace FileStorage.Database
             return destinationStream;
         }
 
+        // Delete a file
         public async Task DeleteFileAsync(ObjectId fileId)
         {
             await _gridFsBucket.DeleteAsync(fileId);
