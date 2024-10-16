@@ -1,10 +1,10 @@
-﻿using FileStorage.Database;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
-using MongoDB.Driver;
-using MongoDB.Driver.GridFS;
+using FileStorage.Services;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace FileStorage.Controllers
 {
@@ -12,31 +12,18 @@ namespace FileStorage.Controllers
     [ApiController]
     public class FilesController : ControllerBase
     {
-        private readonly MongoDbContext _mongoDbContext;
+        private readonly IFileService _fileService;
 
-        public FilesController(MongoDbContext mongoDbContext)
+        public FilesController(IFileService fileService)
         {
-            _mongoDbContext = mongoDbContext;
+            _fileService = fileService;
         }
 
         // Get all files
         [HttpGet()]
         public async Task<IActionResult> GetFiles()
         {
-            var files = await _mongoDbContext.GetFilesAsync();
-
-            var fileInfos = new List<object>();
-            foreach (var file in files)
-            {
-                fileInfos.Add(new
-                {
-                    Id = file.Id.ToString(),
-                    FileName = file.Filename,
-                    UploadDate = file.UploadDateTime,
-                    Length = file.Length
-                });
-            }
-
+            var fileInfos = await _fileService.GetFilesAsync();
             return Ok(fileInfos);
         }
 
@@ -48,7 +35,7 @@ namespace FileStorage.Controllers
                 return BadRequest("File is not provided");
 
             using var stream = file.OpenReadStream();
-            var fileId = await _mongoDbContext.UploadFileAsync(stream, file.FileName);
+            var fileId = await _fileService.UploadFileAsync(stream, file.FileName);
 
             return Ok(new { FileId = fileId.ToString() });
         }
@@ -60,8 +47,7 @@ namespace FileStorage.Controllers
             if (!ObjectId.TryParse(id, out ObjectId objectId))
                 return BadRequest("Invalid file ID");
 
-            var fileStream = await _mongoDbContext.DownloadFileAsync(objectId);
-
+            var fileStream = await _fileService.DownloadFileAsync(objectId);
             if (fileStream == null)
                 return NotFound();
 
@@ -75,8 +61,7 @@ namespace FileStorage.Controllers
             if (!ObjectId.TryParse(id, out ObjectId objectId))
                 return BadRequest("Invalid file ID");
 
-            await _mongoDbContext.DeleteFileAsync(objectId);
-
+            await _fileService.DeleteFileAsync(objectId);
             return NoContent();
         }
     }

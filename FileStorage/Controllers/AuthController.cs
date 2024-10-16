@@ -13,7 +13,7 @@ namespace FileStorage.Controllers
         {
             try
             {
-                var clientId = "911031744599-l50od06i5t89bmdl4amjjhdvacsdonm7.apps.googleusercontent.com";
+                var clientId = "911031744599-l50od06i5t89bmdl4amjjhdvacsdonm7.apps.googleusercontent.com"; // Replace with your actual Google Client ID
 
                 // Validate the Google ID token
                 var payload = await GoogleJsonWebSignature.ValidateAsync(request.Token, new GoogleJsonWebSignature.ValidationSettings
@@ -21,7 +21,7 @@ namespace FileStorage.Controllers
                     Audience = new[] { clientId }
                 });
 
-                // If token is valid, return user info
+                // Return success if token is valid
                 return Ok(new
                 {
                     Message = "Authentication successful",
@@ -29,20 +29,19 @@ namespace FileStorage.Controllers
                     Email = payload.Email,
                     Name = payload.Name
                 });
-
+                
             }
-            catch (InvalidJwtException ex)
+            catch (InvalidJwtException)
             {
-                return BadRequest("Invalid Google token.");
+                return BadRequest(new { Error = "Invalid Google token" });
             }
-
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Error = "Internal Server Error", Details = ex.Message });
+            }
         }
-
-
     }
 
-
-    // Model for receiving the token from the frontend
     public class GoogleTokenRequest
     {
         public string Token { get; set; }

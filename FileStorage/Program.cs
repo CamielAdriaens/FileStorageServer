@@ -1,5 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using FileStorage.Database;
+using FileStorage.Repositories;
+using FileStorage.Services;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// CORS configuration for development
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -18,19 +24,34 @@ builder.Services.AddCors(options =>
         });
 });
 
+// Configure MongoDbSettings from appsettings.json
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
 
-// Register MongoDbContext as a singleton service
-builder.Services.AddSingleton<MongoDbContext>();
+// Register Repository and Service layers
+builder.Services.AddScoped<IFileRepository, FileRepository>();
+builder.Services.AddScoped<IFileService, FileService>();
 
-// Add JWT Bearer authentication using Google's authentication scheme
+// Add JWT Bearer authentication for Google
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         options.Authority = "https://accounts.google.com";
-        options.Audience = "328029009489-7j3ksnst6u05dbq0uhtnc2862t027se7.apps.googleusercontent.com"; // Your Google Client ID
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["Google:ClientId"], // Google Client ID from appsettings
+            ValidIssuer = "https://accounts.google.com", // Google Issuer
+            IssuerSigningKeyResolver = (token, securityToken, kid, parameters) =>
+            {
+                // Use Google's public keys to validate the token
+                var client = new HttpClient();
+                var keys = client.GetStringAsync("https://www.googleapis.com/oauth2/v3/certs").Result;
+                var jsonWebKeySet = new JsonWebKeySet(keys);
+                return jsonWebKeySet.Keys;
+            }
+        };
     });
-builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
-builder.Services.AddSingleton<MongoDbContext>();
 
 var app = builder.Build();
 
@@ -40,13 +61,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseCors("AllowAll");
-
 app.UseHttpsRedirection();
-
 app.UseAuthentication(); // Ensure this is added before UseAuthorization
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
