@@ -1,0 +1,14 @@
+﻿using FileStorage.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace FileStorage.Repositories
+{
+    public interface IUserRepository
+    {
+        Task<User> GetUserByGoogleId(string googleId);
+        Task<User> CreateUser(User user);
+        Task AddUserFile(UserFile file);
+        Task<List<UserFile>> GetUserFiles(string googleId);
+    }
+}

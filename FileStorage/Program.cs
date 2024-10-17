@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using FileStorage.Database;
 using FileStorage.Repositories;
 using FileStorage.Services;
+using Microsoft.EntityFrameworkCore;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,10 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
+// Configure Entity Framework Core with SQL Server
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Configure MongoDbSettings from appsettings.json
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
@@ -30,6 +35,7 @@ builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("Mo
 // Register Repository and Service layers
 builder.Services.AddScoped<IFileRepository, FileRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // Add JWT Bearer authentication for Google
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
