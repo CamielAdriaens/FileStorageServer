@@ -24,9 +24,18 @@ namespace FileStorage.Repositories
 
         public async Task<User> CreateUser(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-            return user;
+            try
+            {
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync(); // This line saves the changes to the SQL database
+                Console.WriteLine($"User with Google ID {user.GoogleId} saved to database.");
+                return user;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving user to database: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task AddUserFile(UserFile file)
@@ -42,6 +51,18 @@ namespace FileStorage.Repositories
                 .FirstOrDefaultAsync(u => u.GoogleId == googleId);
 
             return user?.UserFiles ?? new List<UserFile>();
+        }
+
+        public async Task RemoveUserFile(int userId, string mongoFileId)
+        {
+            var userFile = await _context.UserFiles
+                .FirstOrDefaultAsync(f => f.UserId == userId && f.MongoFileId == mongoFileId);
+
+            if (userFile != null)
+            {
+                _context.UserFiles.Remove(userFile);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }
