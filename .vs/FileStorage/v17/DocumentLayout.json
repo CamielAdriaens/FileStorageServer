@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +19,60 @@
       "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\services\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\services\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\services\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\services\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\models\\userfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\models\\userfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\dtos\\userfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\dtos\\userfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Migrations\\20241021134933_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FileStorage\\Migrations\\20241021134933_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Migrations\\20241021134233_InitialCreatePC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FileStorage\\Migrations\\20241021134233_InitialCreatePC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\services\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\services\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{034A2D6E-3FD3-452B-8A38-0381423D512F}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver\\filestorage\\repositories\\ifilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,37 +94,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "FileStorage\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "FileStorage\\DTOs\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T16:12:38.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "FileStorage\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T13:39:51.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "FileStorage\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Controllers\\AuthController.cs",
               "RelativeToolTip": "FileStorage\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T17:46:11.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FileService.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\FileService.cs",
-              "RelativeDocumentMoniker": "FileStorage\\Services\\FileService.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\FileService.cs",
-              "RelativeToolTip": "FileStorage\\Services\\FileService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T17:45:09.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "IFileService.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\IFileService.cs",
               "RelativeDocumentMoniker": "FileStorage\\Services\\IFileService.cs",
@@ -93,20 +150,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "FileRepository.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Repositories\\FileRepository.cs",
               "RelativeDocumentMoniker": "FileStorage\\Repositories\\FileRepository.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Repositories\\FileRepository.cs",
               "RelativeToolTip": "FileStorage\\Repositories\\FileRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxcAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T17:44:39.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "IFileRepository.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Repositories\\IFileRepository.cs",
               "RelativeDocumentMoniker": "FileStorage\\Repositories\\IFileRepository.cs",
@@ -119,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "MongoDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Database\\MongoDbContext.cs",
               "RelativeDocumentMoniker": "FileStorage\\Database\\MongoDbContext.cs",
@@ -132,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "MongoDbSettings.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Database\\MongoDbSettings.cs",
               "RelativeDocumentMoniker": "FileStorage\\Database\\MongoDbSettings.cs",
@@ -145,7 +202,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\appsettings.json",
+              "RelativeDocumentMoniker": "FileStorage\\appsettings.json",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\appsettings.json",
+              "RelativeToolTip": "FileStorage\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-10T14:21:23.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\FileService.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Services\\FileService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\FileService.cs",
+              "RelativeToolTip": "FileStorage\\Services\\FileService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T17:45:09.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FilesController.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Controllers\\FilesController.cs",
               "RelativeDocumentMoniker": "FileStorage\\Controllers\\FilesController.cs",
@@ -158,28 +241,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\appsettings.json",
-              "RelativeDocumentMoniker": "FileStorage\\appsettings.json",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\appsettings.json",
-              "RelativeToolTip": "FileStorage\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-10T14:21:23.596Z",
+              "DocumentIndex": 13,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "FileStorage\\Repositories\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T13:45:29.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Program.cs",
               "RelativeDocumentMoniker": "FileStorage\\Program.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Program.cs",
               "RelativeToolTip": "FileStorage\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T14:21:22.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "FileStorage\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Properties\\launchSettings.json",
+              "RelativeToolTip": "FileStorage\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-21T14:01:53.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\UserService.cs",
+              "RelativeToolTip": "FileStorage\\Services\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T14:05:38.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserFile.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Models\\UserFile.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Models\\UserFile.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Models\\UserFile.cs",
+              "RelativeToolTip": "FileStorage\\Models\\UserFile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T13:43:35.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserFileDto.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\DTOs\\UserFileDto.cs",
+              "RelativeDocumentMoniker": "FileStorage\\DTOs\\UserFileDto.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\DTOs\\UserFileDto.cs",
+              "RelativeToolTip": "FileStorage\\DTOs\\UserFileDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T16:12:44.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Models\\User.cs",
+              "RelativeToolTip": "FileStorage\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T13:43:29.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20241021134233_InitialCreatePC.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Migrations\\20241021134233_InitialCreatePC.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Migrations\\20241021134233_InitialCreatePC.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Migrations\\20241021134233_InitialCreatePC.cs",
+              "RelativeToolTip": "FileStorage\\Migrations\\20241021134233_InitialCreatePC.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T13:42:34.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Services\\IUserService.cs",
+              "RelativeToolTip": "FileStorage\\Services\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T14:15:03.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20241021134933_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Migrations\\20241021134933_InitialCreate.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Migrations\\20241021134933_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\FileStorage\\Migrations\\20241021134933_InitialCreate.cs",
+              "RelativeToolTip": "FileStorage\\Migrations\\20241021134933_InitialCreate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T13:49:33.218Z",
               "EditorCaption": ""
             }
           ]

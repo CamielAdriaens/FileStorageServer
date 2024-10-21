@@ -14,39 +14,51 @@ namespace FileStorage.Services
             _userRepository = userRepository;
         }
 
-        // Get or create a user by their Google ID
         public async Task<User> GetOrCreateUserByGoogleIdAsync(string googleId, string email, string name)
         {
-            // Get the user by Google ID
-            var user = await _userRepository.GetUserByGoogleId(googleId);
-            if (user == null)
+            try
             {
-                // Create a new user if not found
-                user = new User
+                // Check if the user already exists in the database
+                var user = await _userRepository.GetUserByGoogleId(googleId);
+                if (user == null)
                 {
-                    GoogleId = googleId,
-                    Email = email,
-                    Name = name
-                };
-                user = await _userRepository.CreateUser(user);
+                    Console.WriteLine($"Creating new user with Google ID: {googleId}");
+
+                    // Create a new user
+                    user = new User
+                    {
+                        GoogleId = googleId,
+                        Email = email,
+                        Name = name
+                    };
+
+                    user = await _userRepository.CreateUser(user);
+                    Console.WriteLine($"User {googleId} created successfully.");
+                }
+                else
+                {
+                    Console.WriteLine($"User {googleId} already exists.");
+                }
+
+                return user;
             }
-            return user;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetOrCreateUserByGoogleIdAsync: {ex.Message}");
+                throw;
+            }
         }
 
-        // Get the user's files by their Google ID
         public async Task<List<UserFile>> GetUserFilesAsync(string googleId)
         {
             return await _userRepository.GetUserFiles(googleId);
         }
 
-        // Add a file for a user
         public async Task AddUserFileAsync(string googleId, string mongoFileId, string fileName)
         {
-            // Find the user
             var user = await _userRepository.GetUserByGoogleId(googleId);
             if (user != null)
             {
-                // Create the file metadata
                 var userFile = new UserFile
                 {
                     MongoFileId = mongoFileId,
@@ -55,8 +67,16 @@ namespace FileStorage.Services
                     UserId = user.Id
                 };
 
-                // Add the file metadata to the database
                 await _userRepository.AddUserFile(userFile);
+            }
+        }
+
+        public async Task RemoveUserFileAsync(string googleId, string mongoFileId)
+        {
+            var user = await _userRepository.GetUserByGoogleId(googleId);
+            if (user != null)
+            {
+                await _userRepository.RemoveUserFile(user.Id, mongoFileId);
             }
         }
     }

@@ -10,5 +10,6 @@ namespace FileStorage.Repositories
         Task<User> CreateUser(User user);
         Task AddUserFile(UserFile file);
         Task<List<UserFile>> GetUserFiles(string googleId);
+        Task RemoveUserFile(int userId, string mongoFileId); // Add this method
     }
 }
