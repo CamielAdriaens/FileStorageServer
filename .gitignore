@@ -402,3 +402,9 @@ FileStorage/obj/Debug/net6.0/FileStorage.AssemblyInfoInputs.cache
 .vs/FileStorage/v17/.suo
 *.cs
 *.cache
+*.bin
+*.bin
+.vs/FileStorage/v17/DocumentLayout.json
+.vs/FileStorage/v17/.suo
+*.v2
+*.v2

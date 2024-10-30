@@ -1,4 +1,4 @@
-﻿using FileStorage.Models;
+﻿﻿using FileStorage.Models;
 using FileStorage.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -24,16 +24,16 @@ namespace FileStorage.Services
                 {
                     Console.WriteLine($"Creating new user with Google ID: {googleId}");
 
-                    // Create a new user
+                    // Create a new user and verify properties
                     user = new User
                     {
                         GoogleId = googleId,
-                        Email = email,
-                        Name = name
+                        Email = email ?? "Unknown", // Fallback if email is null
+                        Name = name ?? "Unknown"    // Fallback if name is null
                     };
 
                     user = await _userRepository.CreateUser(user);
-                    Console.WriteLine($"User {googleId} created successfully.");
+                    Console.WriteLine($"User {googleId} created successfully with ID: {user.Id}.");
                 }
                 else
                 {

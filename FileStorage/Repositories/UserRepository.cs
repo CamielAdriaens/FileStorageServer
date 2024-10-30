@@ -1,4 +1,4 @@
-﻿using FileStorage.Database;
+﻿﻿using FileStorage.Database;
 using FileStorage.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -26,9 +26,10 @@ namespace FileStorage.Repositories
         {
             try
             {
+                Console.WriteLine("Attempting to add user to database...");
                 _context.Users.Add(user);
-                await _context.SaveChangesAsync(); // This line saves the changes to the SQL database
-                Console.WriteLine($"User with Google ID {user.GoogleId} saved to database.");
+                await _context.SaveChangesAsync();
+                Console.WriteLine($"User with Google ID {user.GoogleId} saved to database with ID {user.Id}.");
                 return user;
             }
             catch (Exception ex)
