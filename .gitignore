@@ -412,3 +412,4 @@ FileStorage/obj/Debug/net6.0/FileStorage.AssemblyInfoInputs.cache
 *.v2
 *.bin
 *.bin
+/.vs
