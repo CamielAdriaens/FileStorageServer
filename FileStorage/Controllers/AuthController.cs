@@ -20,6 +20,7 @@ namespace FileStorage.Controllers
                 {
                     Audience = new[] { clientId }
                 });
+                Console.WriteLine($"Google ID: {payload.Subject}, Email: {payload.Email}, Name: {payload.Name}");
 
                 // Return success if the token is valid
                 return Ok(new
