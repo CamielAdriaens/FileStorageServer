@@ -400,3 +400,5 @@ ExcelEditor/exceleditorclient/
 FileStorage/obj/Debug/net6.0/FileStorage.AssemblyInfo.cs
 FileStorage/obj/Debug/net6.0/FileStorage.AssemblyInfoInputs.cache
 .vs/FileStorage/v17/.suo
+*.cs
+*.cache
