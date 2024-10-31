@@ -145,10 +145,4 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\r
 C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\FileStorage.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\FileStorage.genruntimeconfig.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\ref\FileStorage.dll
-C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\FileStorage.sourcelink.json
-C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\staticwebassets\msbuild.FileStorage.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\staticwebassets\msbuild.build.FileStorage.props
-C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FileStorage.props
-C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.FileStorage.props
-C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\FileStor.B9846087.Up2Date
+C:\Users\Camil\Documents\GitHub\FileStorageServer\FileStorage\obj\Debug\net6.0\FileStorage.csproj.CopyComplete
