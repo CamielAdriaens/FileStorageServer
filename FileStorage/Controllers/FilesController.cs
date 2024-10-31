@@ -7,6 +7,12 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using MongoDB.Bson;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+
 
 namespace FileStorage.Controllers
 {
@@ -60,6 +66,8 @@ namespace FileStorage.Controllers
 
             if (googleId == null)
                 return Unauthorized("Google ID not found");
+
+            Console.WriteLine($"Passing to GetOrCreateUserByGoogleIdAsync - Google ID: {googleId}, Email: {email}, Name: {name}");
 
             // Get or create the user
             var user = await _userService.GetOrCreateUserByGoogleIdAsync(googleId, email, name);

@@ -62,6 +62,14 @@
               "target": "Package",
               "version": "[6.0.35, )"
             },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[6.36.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.36.0, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.29.0, )"
@@ -77,6 +85,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.36.0, )"
+            },
+            "System.Security.Claims": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

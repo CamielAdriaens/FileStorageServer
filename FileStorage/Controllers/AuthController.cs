@@ -1,13 +1,41 @@
 ﻿using Google.Apis.Auth;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FileStorage.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly IConfiguration _configuration;
+        private string GenerateJwtToken(List<Claim> claims)
+        {
+            // Get JWT settings from appsettings.json
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["JwtSettings:Issuer"],
+                audience: _configuration["JwtSettings:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddHours(1), // Set expiration time as needed
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+        public AuthController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         [HttpPost("google")]
         public async Task<IActionResult> GoogleLogin([FromBody] GoogleTokenRequest request)
         {
@@ -21,6 +49,14 @@ namespace FileStorage.Controllers
                     Audience = new[] { clientId }
                 });
                 Console.WriteLine($"Google ID: {payload.Subject}, Email: {payload.Email}, Name: {payload.Name}");
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, payload.Subject),
+            new Claim(ClaimTypes.Email, payload.Email),
+            new Claim(ClaimTypes.Name, payload.Name)  // Add Name as a claim
+        };
+                var token = GenerateJwtToken(claims);
+
 
                 // Return success if the token is valid
                 return Ok(new
@@ -47,4 +83,6 @@ namespace FileStorage.Controllers
     {
         public string Credential { get; set; } // This is the token from the frontend (Google ID token)
     }
+    
+
 }

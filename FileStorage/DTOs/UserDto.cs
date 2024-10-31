@@ -1,9 +1,10 @@
 ﻿namespace FileStorage.DTOs
 {
-    public class UserFileDto
+    public class UserDto
     {
-        public string MongoFileId { get; set; }
-        public string FileName { get; set; }
-        public DateTime UploadDate { get; set; }
+        public string GoogleId { get; set; }
+        public string Email { get; set; }
+        public string Name { get; set; }
+        public List<UserFileDto> UserFiles { get; set; }
     }
 }
