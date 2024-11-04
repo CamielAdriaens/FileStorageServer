@@ -6,6 +6,11 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using INTERFACES; // For service interfaces only
+using LOGIC;      // For service implementations
+using DTOs;       // For data transfer objects (if needed in controllers)
+using Models;     // If needed for models directly used in responses or validations
+
 
 namespace FileStorage.Controllers
 {

@@ -664,7 +664,7 @@
           }
         }
       },
-      "MongoDB.Bson/2.29.0": {
+      "MongoDB.Bson/2.30.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -681,12 +681,12 @@
           }
         }
       },
-      "MongoDB.Driver/2.29.0": {
+      "MongoDB.Driver/2.30.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "2.29.0",
-          "MongoDB.Driver.Core": "2.29.0",
+          "MongoDB.Bson": "2.30.0",
+          "MongoDB.Driver.Core": "2.30.0",
           "MongoDB.Libmongocrypt": "1.12.0"
         },
         "compile": {
@@ -700,13 +700,13 @@
           }
         }
       },
-      "MongoDB.Driver.Core/2.29.0": {
+      "MongoDB.Driver.Core/2.30.0": {
         "type": "package",
         "dependencies": {
           "AWSSDK.SecurityToken": "3.7.100.14",
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "2.29.0",
+          "MongoDB.Bson": "2.30.0",
           "MongoDB.Libmongocrypt": "1.12.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
@@ -724,12 +724,12 @@
           }
         }
       },
-      "MongoDB.Driver.GridFS/2.29.0": {
+      "MongoDB.Driver.GridFS/2.30.0": {
         "type": "package",
         "dependencies": {
-          "MongoDB.Bson": "2.29.0",
-          "MongoDB.Driver": "2.29.0",
-          "MongoDB.Driver.Core": "2.29.0"
+          "MongoDB.Bson": "2.30.0",
+          "MongoDB.Driver": "2.30.0",
+          "MongoDB.Driver.Core": "2.30.0"
         },
         "compile": {
           "lib/netstandard2.1/MongoDB.Driver.GridFS.dll": {
@@ -1390,6 +1390,122 @@
         },
         "runtime": {
           "lib/net6.0/ZstdSharp.dll": {}
+        }
+      },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Google.Apis.Auth": "1.68.0",
+          "INTERFACES": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.33",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35",
+          "Microsoft.IdentityModel.JsonWebTokens": "6.36.0",
+          "Microsoft.IdentityModel.Tokens": "6.36.0",
+          "Models": "1.0.0",
+          "MongoDB.Driver": "2.30.0",
+          "MongoDB.Driver.GridFS": "2.30.0",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "System.IdentityModel.Tokens.Jwt": "6.36.0",
+          "System.Security.Claims": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "DTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Google.Apis.Auth": "1.68.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.33",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35",
+          "Microsoft.IdentityModel.JsonWebTokens": "6.36.0",
+          "Microsoft.IdentityModel.Tokens": "6.36.0",
+          "MongoDB.Driver": "2.30.0",
+          "MongoDB.Driver.GridFS": "2.30.0",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "System.IdentityModel.Tokens.Jwt": "6.36.0",
+          "System.Security.Claims": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/DTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTOs.dll": {}
+        }
+      },
+      "INTERFACES/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Google.Apis.Auth": "1.68.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.33",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35",
+          "Microsoft.IdentityModel.JsonWebTokens": "6.36.0",
+          "Microsoft.IdentityModel.Tokens": "6.36.0",
+          "Models": "1.0.0",
+          "MongoDB.Driver": "2.30.0",
+          "MongoDB.Driver.GridFS": "2.30.0",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "System.IdentityModel.Tokens.Jwt": "6.36.0",
+          "System.Security.Claims": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/INTERFACES.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/INTERFACES.dll": {}
+        }
+      },
+      "LOGIC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DAL": "1.0.0",
+          "Google.Apis.Auth": "1.68.0",
+          "INTERFACES": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.33",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35",
+          "Microsoft.IdentityModel.JsonWebTokens": "6.36.0",
+          "Microsoft.IdentityModel.Tokens": "6.36.0",
+          "Models": "1.0.0",
+          "MongoDB.Driver": "2.30.0",
+          "MongoDB.Driver.GridFS": "2.30.0",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "System.IdentityModel.Tokens.Jwt": "6.36.0",
+          "System.Security.Claims": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/LOGIC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LOGIC.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Google.Apis.Auth": "1.68.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.33",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35",
+          "Microsoft.IdentityModel.JsonWebTokens": "6.36.0",
+          "Microsoft.IdentityModel.Tokens": "6.36.0",
+          "MongoDB.Driver": "2.30.0",
+          "MongoDB.Driver.GridFS": "2.30.0",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "System.IdentityModel.Tokens.Jwt": "6.36.0",
+          "System.Security.Claims": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
         }
       }
     }
@@ -2600,10 +2716,10 @@
         "version.txt"
       ]
     },
-    "MongoDB.Bson/2.29.0": {
-      "sha512": "wz8UtxdjnknHRJuMatTRr2QMlh7k9457BRfaDQxl+OiKV01vMzm1K0/jTvQJqORV5eba6HrCAzMJzj7nnt5cag==",
+    "MongoDB.Bson/2.30.0": {
+      "sha512": "Gg0TQUT3IEntcqdug5a9P6d8iwL5CqOpQjVBCq1hxTbkjxdGdY6a2CPv7II44AO9GYUnORYsS6dDME2b7aqYyg==",
       "type": "package",
-      "path": "mongodb.bson/2.29.0",
+      "path": "mongodb.bson/2.30.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2614,15 +2730,15 @@
         "lib/netstandard2.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.2.29.0.nupkg.sha512",
+        "mongodb.bson.2.30.0.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/2.29.0": {
-      "sha512": "1IfTnHX8G2SsXIHDz80OVSmcdL95vzzWXGGucR45k7+TUOcWVhiqYcc13ckRXl4NVxn4UTRrrKl+92xvjwWrRA==",
+    "MongoDB.Driver/2.30.0": {
+      "sha512": "BCG8cNF0+U3h5f/O9fu3ktrYhoESBDems1w06PExfYrn2KjHBHCBdvBRY1cIbysnZVjQAJjGtFV9XgW+hXt7Hg==",
       "type": "package",
-      "path": "mongodb.driver/2.29.0",
+      "path": "mongodb.driver/2.30.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2633,15 +2749,15 @@
         "lib/netstandard2.0/MongoDB.Driver.xml",
         "lib/netstandard2.1/MongoDB.Driver.dll",
         "lib/netstandard2.1/MongoDB.Driver.xml",
-        "mongodb.driver.2.29.0.nupkg.sha512",
+        "mongodb.driver.2.30.0.nupkg.sha512",
         "mongodb.driver.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver.Core/2.29.0": {
-      "sha512": "3M7gdmuLEay4Wc/q4zm/oA5KT4E62SsRBiq3prpT3tGEPkfstr3N3fYRbzYNu8TJgeyS0q5OPe4zI4yi6/GemQ==",
+    "MongoDB.Driver.Core/2.30.0": {
+      "sha512": "oepDgu24lo44SljuHmIQ99x6jHISnMC4tLfzQGniQg39xiMD8nxalm1HM9RDZcuZbbWa4F6YLt2AIhWkny3XWA==",
       "type": "package",
-      "path": "mongodb.driver.core/2.29.0",
+      "path": "mongodb.driver.core/2.30.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2653,15 +2769,15 @@
         "lib/netstandard2.0/MongoDB.Driver.Core.xml",
         "lib/netstandard2.1/MongoDB.Driver.Core.dll",
         "lib/netstandard2.1/MongoDB.Driver.Core.xml",
-        "mongodb.driver.core.2.29.0.nupkg.sha512",
+        "mongodb.driver.core.2.30.0.nupkg.sha512",
         "mongodb.driver.core.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver.GridFS/2.29.0": {
-      "sha512": "q2MCxFQ6DceBytIi76zBbAvcYsCz/pJPteGwzGfzGOFoykmA2uOija32tEmmlw4VunZX76+vnCMN6fcuZBjNQA==",
+    "MongoDB.Driver.GridFS/2.30.0": {
+      "sha512": "u7OknyE9F0r4vSISxv/XJKIgYzfJGmzE42WpY0RTXPKM1rxe9NR4HVU1YF7GOpt8IxB6UgGXfdh7KO5PxARftg==",
       "type": "package",
-      "path": "mongodb.driver.gridfs/2.29.0",
+      "path": "mongodb.driver.gridfs/2.30.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2672,7 +2788,7 @@
         "lib/netstandard2.0/MongoDB.Driver.GridFS.xml",
         "lib/netstandard2.1/MongoDB.Driver.GridFS.dll",
         "lib/netstandard2.1/MongoDB.Driver.GridFS.xml",
-        "mongodb.driver.gridfs.2.29.0.nupkg.sha512",
+        "mongodb.driver.gridfs.2.30.0.nupkg.sha512",
         "mongodb.driver.gridfs.nuspec",
         "packageIcon.png"
       ]
@@ -4304,18 +4420,47 @@
         "zstdsharp.port.0.7.3.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+    },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "DTOs/1.0.0": {
+      "type": "project",
+      "path": "../DTOs/DTOs.csproj",
+      "msbuildProject": "../DTOs/DTOs.csproj"
+    },
+    "INTERFACES/1.0.0": {
+      "type": "project",
+      "path": "../INTERFACES/INTERFACES.csproj",
+      "msbuildProject": "../INTERFACES/INTERFACES.csproj"
+    },
+    "LOGIC/1.0.0": {
+      "type": "project",
+      "path": "../LOGIC/LOGIC.csproj",
+      "msbuildProject": "../LOGIC/LOGIC.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DTOs >= 1.0.0",
       "Google.Apis.Auth >= 1.68.0",
+      "INTERFACES >= 1.0.0",
+      "LOGIC >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.33",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.35",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.35",
       "Microsoft.IdentityModel.JsonWebTokens >= 6.36.0",
       "Microsoft.IdentityModel.Tokens >= 6.36.0",
-      "MongoDB.Driver >= 2.29.0",
-      "MongoDB.Driver.GridFS >= 2.29.0",
+      "Models >= 1.0.0",
+      "MongoDB.Driver >= 2.30.0",
+      "MongoDB.Driver.GridFS >= 2.30.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "System.IdentityModel.Tokens.Jwt >= 6.36.0",
       "System.Security.Claims >= 4.3.0"
@@ -4352,7 +4497,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\DTOs\\DTOs.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\DTOs\\DTOs.csproj"
+            },
+            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\INTERFACES\\INTERFACES.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\INTERFACES\\INTERFACES.csproj"
+            },
+            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\LOGIC\\LOGIC.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\LOGIC\\LOGIC.csproj"
+            },
+            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4393,11 +4551,11 @@
           },
           "MongoDB.Driver": {
             "target": "Package",
-            "version": "[2.29.0, )"
+            "version": "[2.30.0, )"
           },
           "MongoDB.Driver.GridFS": {
             "target": "Package",
-            "version": "[2.29.0, )"
+            "version": "[2.30.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

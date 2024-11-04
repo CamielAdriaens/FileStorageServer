@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using FileStorage.Services;
+using LOGIC;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Security.Claims;
@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Http;
 using MongoDB.Bson;
 using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using INTERFACES;
 
 
 namespace FileStorage.Controllers

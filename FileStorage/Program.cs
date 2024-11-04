@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using FileStorage.Database;
-using FileStorage.Repositories;
-using FileStorage.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using LOGIC; // To access ConfigureAppServices extension
+using INTERFACES;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,24 +23,9 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
-// Configure Entity Framework Core with SQL Server
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
-// Configure MongoDbSettings from appsettings.json
-builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
-
-// Register Repository and Service layers
-builder.Services.AddScoped<IFileRepository, FileRepository>();
-builder.Services.AddScoped<IFileService, FileService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
-
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
-});
+// Register all required services via extension method
+builder.Services.ConfigureAppServices(builder.Configuration);
 
 // Add JWT Bearer authentication for Google
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
