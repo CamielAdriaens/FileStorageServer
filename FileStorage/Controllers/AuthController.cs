@@ -1,4 +1,5 @@
-﻿using Google.Apis.Auth;
+﻿
+using Google.Apis.Auth;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -20,7 +21,9 @@ namespace FileStorage.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private string GenerateJwtToken(List<Claim> claims)
+
+        public string GenerateJwtToken(List<Claim> claims)
+
         {
             // Get JWT settings from appsettings.json
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"]));
