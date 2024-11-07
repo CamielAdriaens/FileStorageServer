@@ -824,10 +824,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "DAL.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DAL.dll": {}
         }
       },
       "INTERFACES/1.0.0": {
@@ -845,10 +842,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "INTERFACES.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "INTERFACES.dll": {}
         }
       },
       "Models/1.0.0": {
@@ -865,10 +859,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "Models.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Models.dll": {}
         }
       }
     }
