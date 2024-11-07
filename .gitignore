@@ -5,7 +5,6 @@
 
 # User-specific files
 *.rsuser
-*.suo
 *.user
 *.userosscache
 *.sln.docstates
@@ -399,24 +398,13 @@ FodyWeavers.xsd
 ExcelEditor/exceleditorclient/
 FileStorage/obj/Debug/net6.0/FileStorage.AssemblyInfo.cs
 FileStorage/obj/Debug/net6.0/FileStorage.AssemblyInfoInputs.cache
-.vs/FileStorage/v17/.suo
 *.cs
 *.cache
 *.bin
 *.bin
 .vs/FileStorage/v17/DocumentLayout.json
-.vs/FileStorage/v17/.suo
 *.v2
 *.v2
-.vs/FileStorage/v17/.suo
 *.v2
 *.bin
 *.bin
-/.vs
-.vs/FileStorage/DesignTimeBuild/.dtbcache.v2
-.vs/FileStorage/v17/.futdcache.v2
-.vs/FileStorage/v17/.suo
-FileStorage/obj/staticwebassets.pack.sentinel
-/.vs
-/.vs/FileStorage/v17
-/.vs
